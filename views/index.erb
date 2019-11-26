@@ -1,5 +1,11 @@
-<h1>It is I, the great <%= @name %> of the olden days of the internet!</h1>
+<% unless @name %>
+<form action='/named-cheezborgar'>
+  <input type='text'name='name'>
+  <input type='submit' value='Submit'>
+</form>  <% end %>
+
 <div>
   <img style='border:30px dotted magenta'src='http://bit.ly/1eze8aE'>
 </div>
+<h1>It is I, the great <%= @name %> of the olden days of the internet!</h1>
 <p> l o o p s </p>
