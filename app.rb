@@ -10,6 +10,12 @@ end
 #   <div><strong>my. f i n a l m e S S a g e</strong></div>"
 # end
 
-get '/cheezborgar' do
+get '/random-cheezborgar' do
+  @name = ['Amigo','Oskar','Merovingian'].sample
+  erb(:index)
+end
+
+get '/named-cheezborgar' do
+  @name = params[:name]
   erb(:index)
 end
